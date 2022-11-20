@@ -37,7 +37,6 @@
                         <th>Patient Id</th>
                         <th>Full Name</th>
                         <th>Doctor Name</th>
-                        <th>Doctor Description</th>
                         <th>Phone</th>
                         <th>Status</th>
                         <th>Action</th>
@@ -57,10 +56,9 @@
                     <td>".$row['User_id']."</td>
                     <td>".$row['Fname']." ".$row['Lname']."</td>
                     <td>".$r1['Fname']." ".$r1['Lname']."</td>
-                    <td>".$row['Description']."</td>
                     <td>".$row['phone']."</td>
                     <td><span style='color: blue;'>pending</span></td>
-                    <td> <a href='price.php?id=".$row['ID']."' target='iframe' id='td'></i>View</a></td>
+                    <td> <a href='ph.php?id=".$row['ID']."' target='iframe' id='td'></i>View</a></td>
                 </tr>
                                     ";
                    

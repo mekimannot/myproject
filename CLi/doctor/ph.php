@@ -164,7 +164,7 @@
             </tr>
            
             </table>
-            <input type="submit" name="submit" value="send" class="submit">
+            <input type="submit" name="submit" value="send" class="submit" style="background: #3c8dbc; border-radius: 10px; padding: 10px 10px 15px 10px; border: 1px solid #3c8dbc;">
         </div>
         <div class="pdr-2"><h3 class="tt1">Prescriber's</h3><h3 class="tt2">Dispenser's</h3></div>
         <div class="pdr-2"><label>Full Name: </label><input type="text" name="n30" style="margin-left: 40px; padding-left: 10px; color: black; background: white;" class="inp"><input type="text" name="n31" style="margin-left: 50px; padding-left: 10px; color: black; background: white;" class="inp"></div>

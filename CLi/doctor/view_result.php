@@ -33,7 +33,17 @@
     }
   }$select1=mysqli_query($conn,"select *from lab where patient_id=$user_id");
   $row1=mysqli_fetch_assoc($select1);
-
+if(isset($_POST['phar'])){
+    $_SESSION['user_id']=$_POST['id'];
+        echo "<script>document.location='ph.php';</script>";
+ }if(isset($_POST['ref'])){
+    $_SESSION['user_id']=$_POST['id'];
+        echo "<script>document.location='referance.php';</script>";
+ }if(isset($_POST['no'])){
+    $id=$_POST['id'];
+    $delete=mysqli_query($conn,"delete from patient where ID='$id'");
+        echo "<script>document.location='lab_result.php';</script>";
+ }
 ?>
 <!DOCTYPE html>
 <html>
@@ -62,6 +72,37 @@
             text-decoration: none;
             padding-top: 10px;
         }
+              .where_to_go{
+                width: 500px;
+                height: 440px;
+                background: lightgray;
+                border-radius: 10px;
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 25%;
+                padding: 10px;
+              }.subb{
+                margin-top: 30px;
+                margin-left: 30%;
+              }.subbb{
+                margin-left: 55%;
+                margin-top: -37px;
+              }.row{
+                margin-left: 40px;
+                margin-top: 40px;
+                width: 85%;
+              }.btn{
+                width: 80%;
+                height: 40px;
+                margin-top: 30px;
+                background: #3c8dbc;
+                color: white;
+                border: 1px solid #3c8dbc;
+                margin-left: 40px;
+              }.btn:hover{
+                background: #367fa9;
+              }
     </style>
 </head>
 <body>
@@ -108,7 +149,7 @@
                 <th colspan="2">SEROLOGY</th>
             </tr>
             <tr>
-                <td><div class="c1"><p>APP</p> <output type="checkbox"<?php if($n5>0){ if($r5['app']=='ok'){ ?> checked <?php } } ?> class="c2" readonly ></div></td>
+                <td><div class="c1"><p>APP</p> <input type="checkbox"<?php if($n5>0){ if($r5['app']=='ok'){ ?> checked <?php } } ?> class="c2" readonly ></div></td>
                 <td><div class="c1">color<input type="checkbox"<?php if($n5>0){ if($r5['color']=='ok'){ ?> checked <?php } }?> name="c2" class="c2"></div></td>
                 <td colspan="2"><div class="c1">Hg   <p><input type="text" name="m1" value="<?php echo $row1['hg']; ?>">Mg/di</p></div></td>
                 <td rowspan="3" align="center">Widal <br>& <br>Weil Flex</td>
@@ -173,8 +214,31 @@
                 <td colspan="6"><div class="c1"><p style="margin-left: 20px; color: white;">Reported by</p><p style="margin-right: 230px; color: white;">Sig.</p></div></td>
             </tr>
             </table>
-            <?php echo "<a href='select.php?id=".$row['ID']."' target='iframe' id='td' class='submit'>Send To</a>";?>
+            <a onclick='showmenu()' id='td' class='submit' style="background: #3c8dbc; border-radius: 10px; padding: 10px 10px 0px 10px; border: 1px solid #3c8dbc;">Send To</a>
         </div></form>
+        <form method="post">
+            <div class='where_to_go' id="show">
+                      <form method='post'> 
+            <input type='text' name='id' style='display: none;' value="<?php echo $row['ID']; ?>"> 
+                          <input type='submit' name='phar' value='To Pharmacy' class='btn btn-primary'>
+                          <input type='submit' name='ref' value='To Referance' class='btn btn-primary'>
+                         <input type='submit' name='no' value='No Where' class='btn btn-primary'>
+                      </form>
+                  </div>
+        </form>
     </div>
+    <script type="text/javascript">
+
+         var state=false;
+      function showmenu(){
+         state=!state
+
+         if(state===true){
+            document.getElementById("show").style.display="block";
+         }else{
+            document.getElementById("show").style.display="none";
+         }
+      }
+     </script>
 </body>
 </html>

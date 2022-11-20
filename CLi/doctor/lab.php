@@ -53,10 +53,10 @@
     $insert=mysqli_query($conn,"insert into lab(patient_id,app,color,o,cons,leucocyte,h,oip,nitrite,ox,urobilinogen,rpr,protein,rhe,ph,hcg,blood,fbc,spec,bact,ketones,gram,bilirubin,bloodfilm,a,glucose,imun,other,rbc,bloodgroup,wbc,hg,hct,wbcm,netrophils,basophils,eosinophils,monocytes,lymphocytes,esr) values('$user_id','$c1','$c2','$c3','$c4','$c5','$c6','$c7','$c8','$c9','$c10','$c11','$c12','$c13','$c14','$c15','$c16','$c17','$c18','$c19','$c20','$c21','$c22','$c23','$c24','$c25','$c26','$c27','$c28','$c29','$c30','$m1','$m2','$m3','$m4','$m5','$m6','$m7','$m8','$m9')");
     if($insert){
         echo "<script>alert('Seccussfuly sended');</script>";
-        echo "<script>document.location='lab.php'</script>";
+        echo "<script>document.location='patinet.php'</script>";
     }else{
         echo "<script>alert('something wrong');</script>";
-        echo "<script>document.location='lab.php'</script>";
+        echo "<script>document.location='patient.php'</script>";
     }
   }
 

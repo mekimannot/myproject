@@ -44,6 +44,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="../bootstrap.css">
+    <style type="text/css">
+        body{
+            background: lightgray;
+        }.row{
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <div class="ar1" >
@@ -62,17 +70,18 @@
         </div></form><hr>
             <form action="" method="post">
                 <div class="ar2">
-                    <div class="three" style="margin-left: 0px;">
-                    <div class="two" style="margin-left: 10px;">
+                    <div class="row">
+                        <div class="col-md-4">
+                    <div class="form-group">
                         <label for="">First Name</label>
-                        <input type="text" required name="fname" class="input" value="<?php if($count>0){echo $row['Fname'];} ?>" >
-                    </div>
-                    <div class="two" style="margin-left: 10px;">
+                        <input type="text" required name="fname" class="form-control" value="<?php if($count>0){echo $row['Fname'];} ?>" >
+                    </div></div><div class="col-md-4">
+                    <div class="form-group">
                         <label for="">Last Name</label>
-                        <input type="text" name="lname" class="input" required value="<?php if($count>0){echo $row['Lname'];} ?>">
-                    </div><div class="two" style="margin-left: 10px;">
+                        <input type="text" name="lname" class="form-control" required value="<?php if($count>0){echo $row['Lname'];} ?>">
+                    </div></div><div class="col-md-4"><div class="form-group">
                         <label for="">Doctor</label>
-                        <select name="doctor" id="" class="input" required>
+                        <select name="doctor" id="" class="custom-select form-control" required>
                             <option  value="">select doctor</option>
                             <?php
                             $select5=mysqli_query($conn,"select *from staff where role='doctor'");
@@ -87,14 +96,14 @@
                    }
                 ?>
                         </select>
-                    </div></div> <div class="three" style="margin-left: 0px;">
-                    <div class="two" style="margin-left: 10px;">
+                    </div></div></div> <div class="row"><div class="col-md-4">
+                    <div class="form-group">
                         <label for="">User ID</label>
-                        <input type="text" name="user_id" required class="input" value="<?php if($count>0){echo $row['Student_id'];} ?>">
-                    </div>
-                    <div class="two" style="margin-left: 10px;">
+                        <input type="text" name="user_id" required class="form-control" value="<?php if($count>0){echo $row['Student_id'];} ?>">
+                    </div></div><div class="col-md-4">
+                    <div class="form-group">
                         <label for="">Department</label>
-                        <select name="depart" id="" class="input" required>
+                        <select name="depart" id="" class="custom-select form-control" required>
                             <option  value="<?php if($count>0){echo $row['Department'];} ?>"><?php if($count>0){echo $row['Department'];}else{
                                 echo "select department";
                             } ?></option>
@@ -111,26 +120,26 @@
                    }
                 ?>
                         </select>
-                    </div><div class="two" style="margin-left: 10px;">
+                    </div></div><div class="col-md-4"><div class="form-group">
                         <label for="">Age</label>
-                        <input type="text" name="age" required class="input" value="<?php if($count>0){echo $row['age'];} ?>">
-                    </div></div><div class="three" style="margin-left: 0px;">
-                    <div class="two" style="margin-left: 10px;">
+                        <input type="text" name="age" required class="form-control" value="<?php if($count>0){echo $row['age'];} ?>">
+                    </div></div></div><div class="row"><div class="col-md-4">
+                    <div class="form-group">
                         <label for="">Address</label>
-                        <input type="text" name="address" required class="input"  value="<?php if($count>0){echo $row['Address'];} ?>">
-                    </div>
-                    <div class="two" style="margin-left: 10px;">
+                        <input type="text" name="address" required class="form-control"  value="<?php if($count>0){echo $row['Address'];} ?>">
+                    </div></div><div class="col-md-4">
+                    <div class="form-group">
                         <label for="">Phone</label>
-                        <input type="text" name="phone" required class="input" value="<?php if($count>0){echo $row['Phone'];} ?>">
-                    </div><div class="two" style="margin-left: 10px;">
+                        <input type="text" name="phone" required class="form-control" value="<?php if($count>0){echo $row['Phone'];} ?>">
+                    </div></div><div class="col-md-4"><div class="form-group">
                         <label for="">Gender</label>
-                        <select name="gender" class="input" required>
+                        <select name="gender" class="form-control" required>
                             <option value="">Select Gender</option>
                             <option value="Male">Male</option>
                             <option value="Female">Female</option>
                         </select>
-                    </div></div>
-                    <input type="submit" name="submit" class="submit" value="send">
+                    </div></div></div>
+                    <input style="margin-left: 40%; margin-top: 30px;" type="submit" name="submit" class="btn btn-primary" value="Send Patient">
                 </div>
             </form>
         </div>

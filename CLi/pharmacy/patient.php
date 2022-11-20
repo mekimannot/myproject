@@ -38,7 +38,6 @@
                         <th>Full Name</th>
                         <th>Drug</th>
                         <th>Amount</th>
-                        <th>Doctor Info</th>
                         <th>Phone</th>
                         <th>Status</th>
                     </tr></thead>
@@ -55,7 +54,6 @@
                     <td>".$row['Fname']." ".$row['Lname']."</td>
                     <td>".$row['drug']."</td>
                     <td>".$row['amount']."</td>
-                    <td>".$row['Description']."</td>
                     <td>".$row['phone']."</td>
                     <td><span style='color: green; font-size: 20px;'>Accepted</span></td>
                 </tr>

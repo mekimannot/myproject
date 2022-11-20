@@ -37,6 +37,13 @@
             border-bottom: 1px solid black;
         }.bottom{
             display: grid;
+        }.sub{
+            margin-left: 45%;
+            background: #3c8dbc;
+            border: 1px solid #3c8dbc;
+            padding: 10px;
+            border-radius: 5px;
+            padding-top: 5px;
         }
     </style>
 </head>
@@ -47,7 +54,7 @@
          <h2><span class="title">ለወራቤ ኮምፕሬንሄስቭ ስፔስሻላዝድ ሆስፒታል</span></h2>
          <h2><span style="border-bottom:  1px solid black;">ወራቤ</span></h2>
          <h3 style="margin-left: 20%;">ጉዳይ:- <span style="border-bottom: 1px solid black;">የዱቤ ህክምና ይመለከታል</span></h3>
-         <p>በወራቤ ዩንቨርሲቲ በ <span style="border-bottom: 1px dashed black;">ወራቤ</span> ኮሌጅ <span style="border-bottom: 1px dashed black;">ኮምቢውተር</span> ዲፓርትመንት በአይድ ቁጥር <span style="border-bottom: 1px dashed black;">WRU/2121/12</span> የሚማር /የምትማር ተማሪ <span style="border-bottom: 1px dashed black;">መኪ ኤርመና</span> ከሆስፒታላችሁ ጋር በ 30/04/2010 ዓ.ም በገባነው ውል መሰረት የህክምና አገልግሎት እንዲያገኝ /እንድታገኝ መላካችን እየገልፅን ለተለመደው ትብብራቹሁ ምስጋናችን በመስቀደም ነው።</p>
+         <p>በወራቤ ዩንቨርሲቲ በ <span style="border-bottom: 1px dashed black;">ወራቤ</span> ኮሌጅ <span style="border-bottom: 1px dashed black;"><?php?></span> ዲፓርትመንት በአይድ ቁጥር <span style="border-bottom: 1px dashed black;">WRU/2121/12</span> የሚማር /የምትማር ተማሪ <span style="border-bottom: 1px dashed black;">መኪ ኤርመና</span> ከሆስፒታላችሁ ጋር በ 30/04/2010 ዓ.ም በገባነው ውል መሰረት የህክምና አገልግሎት እንዲያገኝ /እንድታገኝ መላካችን እየገልፅን ለተለመደው ትብብራቹሁ ምስጋናችን በመስቀደም ነው።</p>
          <p style="margin-top: 70px; margin-bottom: 70px;">የላከው በላሙያ ስም..........................................ፍርማ.........................</p>
 </div><div class="bottom">
          <div class="date" style="display: flex;margin-left: 75%;"><p>ቀን </p><p style=" margin-left: 10px;"><span style="border-bottom: 1px dashed black;">10/12/2022</span> </p></div>
@@ -56,11 +63,12 @@
          <h3 style="margin-left: 20%;">ጉዳይ:- <span style="border-bottom: 1px solid black;">የዱቤ ህክምና ይመለከታል</span></h3>
          <p>በወራቤ ዩንቨርሲቲ በ <span style="border-bottom: 1px dashed black;">ወራቤ</span> ኮሌጅ <span style="border-bottom: 1px dashed black;">ኮምቢውተር</span> ዲፓርትመንት በአይድ ቁጥር <span style="border-bottom: 1px dashed black;">WRU/2121/12</span> የሚማር /የምትማር ተማሪ <span style="border-bottom: 1px dashed black;">መኪ ኤርመና</span> ከሆስፒታላችሁ ጋር በ 30/04/2010 ዓ.ም በገባነው ውል መሰረት የህክምና አገልግሎት እንዲያገኝ /እንድታገኝ መላካችን እየገልፅን ለተለመደው ትብብራቹሁ ምስጋናችን በመስቀደም ነው።</p>
          <p style="margin-top: 70px; margin-bottom: 70px;">የላከው በላሙያ ስም..........................................ፍርማ.........................</p>
-</div>
+</div><input onclick="print()" type="submit" class="sub" value="Print" id="hide">
      </div>
-<input onclick="print()" type="submit" class="sub" value="Print" id="hide">
+
      <script type="text/javascript">
          function print(){
+            document.getElementById("hide").style.display="none";
             var div_content=document.getElementById("div_print").innerHTML;
             var a=window.open('','','height=1000, width=1000');
             a.document.write('<html>');

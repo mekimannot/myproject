@@ -155,36 +155,10 @@
      <div class="doctor">
         <form action="" method="post">
         <div class="a">
-        <div class="left" style="padding-bottom: 30px;">
-            <p>patinet Information</p>
+        <div class="left" id="show" style="padding-bottom: 30px;">
+            <p>Withdrale Portal</p>
             <hr>
-            <div class="rr">
-                <div class="two">
-                <label>First name</label>
-                <input type="text" name="pdate" class="in2" readonly value="<?php echo $r5['Fname']; ?>">
-            </div>
-                <div class="two">
-                <label>Last Name</label>
-                <input type="text" name="edate" class="in2" readonly value="<?php echo $r5['Lname']; ?>">
-            </div>
-            
-            </div>
-            <div class="rr">
-                <div class="two">
-                <label>User ID</label>
-                <input type="text" name="pdate" class="in2" readonly value="<?php echo $r5['User_id']; ?>">
-            </div>
-                <div class="two">
-                <label>Age</label>
-                <input type="text" name="edate" class="in2" readonly value="<?php echo $r5['age']; ?>">
-            </div>
-            
-            </div>
             <div class="r">
-                <div class="two">
-                <label>Doctor Description</label>
-                <textarea name="description" class="txt" style="width: 90%; cursor: pointer;" readonly><?php echo $r5['Description']; ?></textarea>
-            </div>
             <?php if($n1==1){ ?>
             <div class="rr">
                 <div class="two" style="margin-top: 5px;">
@@ -203,7 +177,7 @@
             </div>
             <input style="padding-left: 5px; padding-right: 10px; margin-left: 10px; margin-top: 40px; width: fit-content;" type="submit" name="submit" class="sub" value="Withdraw">
             </div><?php } else{  echo "<h2 style='margin-top: 13%; text-align: center; color: blue;' >waiting for withdrawal</h2>"; }?>
-            <div style="display: flex; margin-left: 30px; color: maroon; padding-top: 0px;" ><p style="font-size: 25px;">withdrawal is finished</p><button name="yes" class="yes" onclick='sure()'>yes</button><button class="no">no</button></div>
+            <div style="display: flex; margin-left: 0px; color: maroon; padding-top: 0px;" ><p style="font-size: 25px;">withdrawal is finished</p><button name="yes" class="yes" onclick='sure()'>yes</button><button class="no">no</button></div>
             </div>
             
             
@@ -258,7 +232,7 @@
                         echo "<td><p id='p1'>".$num_days." </p></td>";
                 }echo"
                     <td>".$row['price']." birr</td>
-                    <td><a href='price.php?dd=".$row['ID']."'  id='a1'>Withdraw</a></td>
+                    <td><a href='price.php?dd=".$row['ID']."'  id='a1' onclick='showmenu()'>Withdraw</a></td>
                 </tr>
                     ";
                     $t+=$row['total'];
@@ -285,6 +259,20 @@
 
         }
     </script>
+
+         <script type="text/javascript">
+
+         var state=false;
+      function showmenu(){
+         state=!state
+
+         if(state===true){
+            document.getElementById("show").style.display="block";
+         }else{
+            document.getElementById("show").style.display="none";
+         }
+      }
+     </script>
 </body>
 </html>
 <!--</a><a href='price.php?ddd=".$row['ID']."' id='a2'><i class='fa-solid fa-plus'></i></a>-->

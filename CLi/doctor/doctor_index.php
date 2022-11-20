@@ -50,7 +50,7 @@
             <li><i class='fa-solid fa-house' id="an_right"></i><a href="dashboard.php" target="iframe" onclick="hideMenu()">Home</a></li> 
             <li><i class='fa-solid fa-bed' id="an_right"></i><a href="patient.php" target="iframe" onclick="hideMenu()">New Patient</a></li>
             <li><i class='fa-solid fa-bed' id="an_right"></i><a href="lab_result.php" target="iframe" onclick="hideMenu()">Labratory Result</a></li>
-         <li><i class='fa-solid fa-book' id="an_right"></i><a href="history.php" target="iframe" onclick="hideMenu()">Patient History</a></li>
+         <!--<li><i class='fa-solid fa-book' id="an_right"></i><a href="history.php" target="iframe" onclick="hideMenu()">Patient History</a></li>-->
             
         
       </ul></div>

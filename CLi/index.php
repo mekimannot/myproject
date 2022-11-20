@@ -3,10 +3,13 @@
   session_start();
 
   include('conn.php');
+  $error=0;
     if(isset($_POST['submit'])){
         $user_id=$_POST['user_id'];
         $password=$_POST['password'];
-    $select=mysqli_query($conn,"select *from staff where User_id='$user_id' AND Password='$password'");
+        $santazed_id=mysqli_real_escape_string($conn,$user_id);
+        $santazed_password=mysqli_real_escape_string($conn,$password);
+    $select=mysqli_query($conn,"select *from staff where User_id='$santazed_id' AND Password='$santazed_password'");
     $counts=mysqli_num_rows($select);
     if($counts>0){
         while($row=mysqli_fetch_assoc($select)){
@@ -41,9 +44,9 @@
         }
     }
       else{
-    $error[]='Incorrect User ID or Password???....   ';
-    }
-} 
+    $error=1;
+}
+}
 ?>
 
 
@@ -52,7 +55,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clinic Management system </title>
+    <title>Clinic Management system</title>
     <link rel="stylesheet" href="sty.css">
     <link rel="stylesheet" type="text/css" href="bootstrap.css">
     <style>
@@ -86,7 +89,10 @@
         </div>-->
         </div><div class="row1"> 
         <div class="wizard-content box">
+
         <p id="txt">Welcome to Clinic Management system</p>
+        <?php if($error==0){}else{ ?>
+        <p style="color: white; background: darkred; margin-top: -30px; padding: 10px 20px;  border: 1px solid black;">Incorrect User Id or Password</p><?php } ?>
             <input title="Enter your user id" type="text" name="user_id" placeholder="User ID" class="form-control" required><br>
             <input title="Enter your password"  type="password" name="password" placeholder="**********" class="form-control" required><br>
             <a href="" class="forgot-password layer">Forgot Password</a><br>

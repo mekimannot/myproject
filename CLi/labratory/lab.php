@@ -104,7 +104,7 @@
                 <th colspan="2">SEROLOGY</th>
             </tr>
             <tr>
-                <td><div class="c1"><p>APP</p> <output type="checkbox"<?php if($n5>0){ if($r5['app']=='ok'){ ?> checked <?php } } ?> class="c2" readonly ></div></td>
+                <td><div class="c1"><p>APP</p> <input type="checkbox"<?php if($n5>0){ if($r5['app']=='ok'){ ?> checked <?php } } ?> class="c2" readonly ></div></td>
                 <td><div class="c1">color<input type="checkbox"<?php if($n5>0){ if($r5['color']=='ok'){ ?> checked <?php } }?> name="c2" class="c2"></div></td>
                 <td colspan="2"><div class="c1">Hg   <p><input type="text" name="m1">Mg/di</p></div></td>
                 <td rowspan="3" align="center">Widal <br>& <br>Weil Flex</td>

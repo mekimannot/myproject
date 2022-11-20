@@ -12,8 +12,9 @@
     $_SESSION['user_id']=$_POST['id'];
         echo "<script>document.location='referance.php';</script>";
  }if(isset($_POST['no'])){
-    $_SESSION['user_id']=$_POST['id'];
-        echo "<script>document.location='ph.php';</script>";
+    $id=$_POST['id'];
+    $delete=mysqli_query($conn,"delete from patient where ID='$id'");
+        echo "<script>document.location='patient.php';</script>";
  }
  ?>
 <html lang="en">
