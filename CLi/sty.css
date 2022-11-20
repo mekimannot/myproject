@@ -1,0 +1,222 @@
+*{
+	padding: 0;
+	margin: 0;
+	font-family: sans-serif;
+}.contain{
+    width: 100%;
+    height: 100vh;
+    
+    
+}.submit:hover{
+    background-color: seagreen;
+}
+.box{
+	text-align: center;
+	margin: auto;
+	width: 600px;
+	border-radius: 10;
+	border-radius: 30px;
+	margin-top: 10px;
+}
+#txt{
+	margin-bottom: 30px;
+	padding-top: 20px;
+	height: 60px;
+	font-size: 30px;
+	border-radius: 30px 30px 0px 0px;
+
+}
+.input{
+	width: 500px;
+	height: 50px;
+	border-radius: 5px;
+	border: 1px solid black;
+	margin-bottom: 30px;
+	padding-left: 15px;
+	font-size: 25px;
+}
+.layer{
+	text-decoration: none;
+	padding-right: 300px;
+	padding-bottom: 20px;
+}.layer:hover{
+	color: gray;
+}
+.submit{
+	width: 500px;
+	height: 50px;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin-bottom: 60px;
+    font-size: 25px;
+    background: green;
+    margin-top: 15px;
+    color: white;
+}.h{
+    display: flex;
+}.aaaa{
+    margin-left: 250px;
+}
+.g1{
+    transform: translate(5px, 113px) rotate(-40deg);
+}.e1{
+    transform: translate(-10px,85px) rotate(-30deg);
+}.e2{
+    transform: translate(-20px, 60px) rotate(-25deg);
+}.k1{
+    transform: translate(-30px, 40px) rotate(-20deg);
+}.s1{
+    transform: translate(-35px, 24px) rotate(-15deg);
+}.f{
+    transform: translate(-30px, 8px) rotate(-5deg);
+}.o{
+    transform: translate(0px, 5px) rotate(-0deg);
+}.r{
+    transform: translate(-1px, 8px) rotate(5deg);
+}.g2{
+    transform: translate(-2px, 14px) rotate(10deg);
+}.e3{
+    transform: translate(-3px, 25px) rotate(15deg);
+}.e4{
+    transform: translate(-6px, 40px) rotate(20deg);
+}.k2{
+    transform: translate(-14px, 60px) rotate(25deg);
+}.s2{
+    transform: translate(-20px, 80px) rotate(30deg);
+}.i1{
+    transform: translate(-35px, 95px) rotate(35deg);
+}.t1{
+    transform: translate(-50px, 115px) rotate(40deg);
+}.y1{
+    transform: translate(-70px, 140px) rotate(45deg);
+}span{
+    display: inline-block;
+	color: white;
+}.bbbb{
+	display: none;
+}
+@media(max-width: 700px){
+	.h{
+		display: flex;
+	}.aaaa{
+		margin-left: 250px;
+		display: none;
+	}.bbbb{
+		margin-top: 30px;
+		display: block;
+		margin-left: 30px;
+		color: white;
+	}
+}
+.alert{
+	color: black;
+	width: 100%;
+	height: 30px;
+	background: orangered;
+	text-align: center;
+	padding-top: 15px;
+}@media(max-width: 700px){
+	.box{
+		width: fit-content;
+	}.input{
+		width: 250px;
+	}.submit{
+		width: 250px;
+	}#txt{
+		font-size: 20px;
+	}.alert{
+		width: 83%;
+		float: center;
+		font-size: 15px;
+		margin-left: 10px;
+		margin: auto;
+	}.layer{
+		flex-wrap: nowrap;
+		padding-right: 50px;
+	}
+}.row1{
+	display: flex;
+}.col-1{
+	width: 300px;
+	height: 300px;
+	border-radius: 150px;
+	background: yellow;
+	margin-top: 170px;
+	margin-left: 20px;
+}.col-1 h1{
+	text-align: center;
+	margin-top: 30px;
+}
+.col-2{
+	width: 300px;
+	height: 300px;
+	border-radius: 150px;
+	background: brown;
+	margin-top: 170px;
+	margin-right: 20px;
+	float: center;
+}.col-3{
+	width: 200px;
+	height: 200px;
+	background: white;
+	border-radius: 100px;
+margin-top: 50px;
+margin-left: 50px;
+	text-align: center;
+	
+}.col-4{
+	width: 200px;
+	height: 200px;
+	background: white;
+	border-radius: 100px;
+margin-top: 50px;
+margin-left: 50px;
+	text-align: center;
+	
+}.col-3 h1{
+	width: 80px;
+	padding: 40px 20px;
+	border-radius: 70px;
+	font-weight: 500;
+	color: white;
+	font-size: 26px;
+	bottom: 0;
+	left: 12%;
+	transform: translate(-50%);
+	position: absolute;
+	opacity: 0;
+	transition: 0.5s;
+    background: green;
+
+}.col-4 h1{
+	width: 80px;
+	padding: 40px 20px;
+	border-radius: 70px;
+	font-weight: 500;
+	color: white;
+	font-size: 26px;
+	bottom: 0;
+	left: 87.5%;
+	transform: translate(-50%);
+	position: absolute;
+	opacity: 0;
+	transition: 0.5s;
+    background: green;
+
+}.row1:hover .col-1 h1{
+  bottom: 35%;
+	opacity: 1;
+}.row1:hover .col-2 h1{
+  bottom: 35%;
+	opacity: 1;
+}
+@media(max-width: 700px){
+	.col-1{
+		display: none;
+	}.col-2{
+		display: none;
+	}
+}.img{
+    margin-left: 20px;
+    margin-top: 20px;
+}
