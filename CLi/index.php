@@ -52,7 +52,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clinic Management system skdhgksdjhkg</title>
+    <title>Clinic Management system </title>
     <link rel="stylesheet" href="sty.css">
     <link rel="stylesheet" type="text/css" href="bootstrap.css">
     <style>
@@ -64,7 +64,7 @@
     <form action="" method="post"> 
         <div class="h" style="display: block;">
         <img class="img" src="images/w.jpg" alt="Werabe" height="50px" width="50px" style="text-align: center; margin-left: 48%; margin-top: 50px; margin-bottom: 20px;">
-        <p align="center" style="margin-bottom: 40px; font-weight: bold; font-size: 30px;" class="p">Werabe University</p>
+        <p align="center" style="margin-bottom: 40px; font-weight: bold; font-size: 30px;" class="p">Werabe University skdhgksdjhkg</p>
         <!--<div class="aaaa" style="text-align: center; padding-top: 20px;margin-bottom: 80px; font-size: 55 px; color: green;">
           <span class="g1">W</span>
           <span class="e1">E</span>
